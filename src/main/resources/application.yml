@@ -1,5 +1,23 @@
+server: 
+    port: 80
+    context-path: /
+    tomcat:
+      uri-encoding: UTF-8
 logging:
   level: 
-    root: warn  
+    root: info  
     path: H:/log/baron  
+spring:
+  datasource:
+     #基本配置
+    driver-class-name: com.mysql.jdbc.Driver       
+    url: jdbc:mysql://localhost:3306/db_ashitaba
+    username: root
+    password: 520520
     
+  thymeleaf:
+    cache: false 
+     
+  messages:
+    basename: i18n.login
+      
