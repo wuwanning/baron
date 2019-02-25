@@ -6,7 +6,7 @@ server:
 logging:
   level: 
     root: info  
-    path: H:/log/baron  
+    path: E:/log/baron  
 spring:
   datasource:
      #基本配置
@@ -20,4 +20,5 @@ spring:
      
   messages:
     basename: i18n.login
-      
+  mvc:
+    date-format: yyyy-MM-dd     
