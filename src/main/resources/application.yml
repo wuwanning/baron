@@ -10,8 +10,8 @@ logging:
 spring:
   datasource:
      #基本配置
-    driver-class-name: com.mysql.jdbc.Driver       
-    url: jdbc:mysql://localhost:3306/db_ashitaba
+    driver-class-name: com.mysql.jdbc.Driver #可以省略 会根据URL自动判断 
+    url: jdbc:mysql://111.231.79.149:3306/db_test
     username: root
     password: 520520
     
@@ -20,5 +20,13 @@ spring:
      
   messages:
     basename: i18n.login
+    
   mvc:
-    date-format: yyyy-MM-dd     
+    date-format: yyyy-MM-dd   
+    
+  redis:
+    host: 111.231.79    
+    
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true    
