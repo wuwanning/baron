@@ -11,9 +11,9 @@ spring:
   datasource:
      #基本配置
     driver-class-name: com.mysql.jdbc.Driver #可以省略 会根据URL自动判断 
-    url: jdbc:mysql://111.231.79.149:3306/db_test
+    url: jdbc:mysql://111.231.79.149:3306/db_test?useSSL=false
     username: root
-    password: 520520
+    password: Miku520@
     
   thymeleaf:
     cache: false 
