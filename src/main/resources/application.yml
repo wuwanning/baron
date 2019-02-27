@@ -4,7 +4,8 @@ server:
     tomcat:
       uri-encoding: UTF-8
 logging:
-  level: 
+  level:
+    cn.mikulove.dao: debug   
     root: info  
     path: E:/log/baron  
 spring:
@@ -25,8 +26,17 @@ spring:
     date-format: yyyy-MM-dd   
     
   redis:
-    host: 111.231.79    
-    
+    host: 111.231.79.149
+    port: 6379
+    database: 0
+    timeout: 1000
+    password:  
+    pool: 
+      max-active: 8
+      max-wait: -1
+      max-idle: 8
+      min-idle: 0    
+
 mybatis:
   configuration:
     map-underscore-to-camel-case: true    

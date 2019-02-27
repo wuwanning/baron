@@ -3,6 +3,7 @@ package cn.mikulove.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import cn.mikulove.dao.UserDao;
@@ -18,7 +19,7 @@ public class UserService {
 		return userDao.getById(id);
 	}
 
-	
+	@Cacheable(cacheNames="user",key="#id")
 	public List<User> findAllUser(){
 		return userDao.getAll();
 	}
