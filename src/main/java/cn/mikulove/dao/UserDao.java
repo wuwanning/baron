@@ -20,9 +20,9 @@ public interface UserDao {
         @Result(property = "age", column = "age"),
         @Result(property = "birthday", column = "birthday")
 	})*/
-	@Cacheable(key ="#p0") 
+	@Cacheable(key ="#a0") 
 	@Select("SELECT * FROM t_user WHERE id = #{id}") 
-    User getById(int id);
+    User getById(Integer id);
 	
 	@Select("SELECT * FROM t_user") 
 	List<User> getAll();
