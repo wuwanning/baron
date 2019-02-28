@@ -35,8 +35,15 @@ spring:
       max-active: 8
       max-wait: -1
       max-idle: 8
-      min-idle: 0    
-
+      min-idle: 0   
+      
+  rabbitmq:
+    host: 111.231.79.149     
+    username: guest
+    password: guest
+   # addresses: 
+   # port: 
+    
 mybatis:
   configuration:
     map-underscore-to-camel-case: true    
