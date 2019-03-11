@@ -4,17 +4,18 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import cn.mikulove.entities.User;
 import cn.mikulove.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-@RestController
+@Controller
 public class UserController {
 	
 	@Resource
@@ -27,7 +28,7 @@ public class UserController {
 		model.addAttribute("users", users);
 		return "user/list";
 	}
-	
+	@ResponseBody
 	@GetMapping("/user/{id}")
 	public User getUser(@PathVariable("id") Integer id){
 		log.info("find  user id:"+id);
